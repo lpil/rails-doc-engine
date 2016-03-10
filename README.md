@@ -11,28 +11,28 @@ wherever.
 
 ## Usage
 
-Add the docs
+Add the doc views. They go in `app/views/doc_server/docs/`.
+
+Bump the version in `lib/doc_server/version.rb`
+
+Build the gem.
 
 ```sh
-# er?
+gem build doc_server.gemspec
 ```
 
-Cut the gem
+Upload the newly cut gem to S3.
+Or some other file store accessible from the interwebs.
 
 ```sh
-# er?
+aws s3 cp doc_server-0.0.0.gem s3://my-bucket/
 ```
 
-Do the gem hosting stuff
-
-```sh
-# er???
-```
-
-Add it to your host project's Gemfile
+Add the gem to your host application, specifying your online file storage as
+the gem source.
 
 ```ruby
-gem "doc_server", source: "http://where.you/put/it"
+gem "doc_server", source: "http://path.to/s3/bucket"
 ```
 
 And lastly, mount it in your host application.
