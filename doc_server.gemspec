@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = ""
   s.license     = ""
 
-  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,public,lib}/**/*", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.5.2"
