@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,public,lib}/**/*", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.5.2"
+  s.add_dependency "rails", "~> 4.2"
   s.add_development_dependency "pry-byebug"
 end
